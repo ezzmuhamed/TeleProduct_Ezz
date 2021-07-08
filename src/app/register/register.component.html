@@ -1,0 +1,32 @@
+<div class="container mt-4 mb-4">
+  <div class="login_container">
+  <h5>Register New User</h5>
+  <hr />
+  <form [formGroup]= "userForm" (ngSubmit) = "register()" >
+    <div class="fromGroup">
+      <label for="userName" >User Name</label>
+      <input type="text" formControlName = "userName"class="form-control" id="userName" placeholder="user Name">
+
+    </div>
+
+    <div class="fromGroup">
+      <label for="email" >Email Address</label>
+      <input type="email" formControlName = "email" class="form-control" id="email" placeholder="Email">
+
+    </div>
+
+    <div class="fromGroup">
+      <label for="password" >Password</label>
+      <input type="password" formControlName = "password" class="form-control" id="password" placeholder="Password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <div class="btn-login mt-3">
+    Already User <a href="login" class="btn btn-success"> Login</a>
+  </div>
+  </div>
+  <div class="alert-primary mt-3"  role = "alert">
+        <strong>User Name : </strong>{{this.userForm.get('userName').value}}
+      </div>
+</div>

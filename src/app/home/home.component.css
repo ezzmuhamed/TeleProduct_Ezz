@@ -1,11 +1,13 @@
-h1 {
-   
-    text-align:center;
-}
-
-img {
-    width: 80%;
-  position: absolute;
-  top: 20%;
-  left: 20%;
+.map-container{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  }
+  .map-container iframe{
+  left:0;
+  top:0;
+  height:50%;
+  width:100%;
+  position:absolute;
   }

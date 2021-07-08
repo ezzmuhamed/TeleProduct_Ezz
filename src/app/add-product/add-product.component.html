@@ -1,0 +1,49 @@
+<div class="container mt-4 mb-4">
+  <div class="login_container">
+  <h5>Add New Product</h5>
+  <hr />
+  <form [formGroup]= "userForm" (ngSubmit) = "AddProductImg()" >
+    <div class="fromGroup">
+      <label for="name" >Product Name</label>
+      <input type="text" formControlName = "name"class="form-control" id="name" placeholder="name">
+
+    </div>
+
+    <div class="fromGroup">
+      <label for="desc" >Description</label>
+      <input type="desc" formControlName = "desc" class="form-control" id="desc" placeholder="Desc">
+
+    </div>
+
+
+    <div class="row">
+      <div class = "col-md-8">
+        <div class="fromGroup">
+          <div class="input-group mb-3">
+            <div class="custom-file">
+              <input type="file" formControlName = "pic" accept = "image/*" class="custom-file-input" id="pic"
+              (change)="HandleFiles($event)" arial-describedby = "inputGroupFile01">
+              <label class="custom-file-label upload-lbl" for="pic">
+                <span *ngIf = "img.name !== null">{{img.name}}</span>
+                <span *ngIf = "img.name === null">Chooess file</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class ="col-md-4">
+      <img id = "image" class ="img-fluid" [src] ="urlImage">
+    </div>
+
+    <div class="fromGroup">
+      <label for="stauts" >Status</label>
+      <input type="stauts" formControlName = "stauts" class="form-control" id="stauts" placeholder="stauts">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+
+  </div>
+
+</div>

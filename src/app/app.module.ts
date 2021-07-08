@@ -3,14 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { LoginComponent } from './login/login.component';
-import { RegestraionComponent } from './regestraion/regestraion.component';
-import { ProductsComponent } from './products/products.component';
-import { ProductsUserComponent } from './products-user/products-user.component';
 import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+import { FooterMenuComponent } from './footer-menu/footer-menu.component';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductItemComponent } from './product-item/product-item.component';
-import { FormsModule } from '@angular/forms';
+import { ProductsComponent } from './products/products.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 
 
@@ -19,19 +20,24 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
+    NavMenuComponent,
     LoginComponent,
-    RegestraionComponent,
-    ProductsComponent,
-    ProductsUserComponent,
     HomeComponent,
-    ProductItemComponent
-    
+    RegisterComponent,
+    FooterMenuComponent,
+    ProductsComponent,
+    AddProductComponent,
+
+
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
-    FormsModule
 
   ],
   providers: [],
